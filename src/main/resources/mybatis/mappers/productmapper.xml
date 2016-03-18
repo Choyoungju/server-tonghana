@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="product">
+
+	<update id="addPoint" parameterType="hashMap">
+		UPDATE member m 
+		SET m.point = m.point+(	
+								SELECT p.point 
+								FROM product p 
+								WHERE p.no=#{no}	
+							   )
+		WHERE m.no=#{member.no}
+	</update>
+
+	<select id="selectAll" resultType="product">
+		SELECT * FROM product
+	</select>
+	
+	<select id="getTotalCnt" resultType="int">
+		SELECT COUNT(*)
+	  	FROM   (	
+				SELECT *
+				FROM product
+				) 
+		countTable
+	</select>
+
+	<select id="selectProductPoint" parameterType="product" resultType="product">
+		SELECT no, point 
+		FROM product 
+		WHERE no=#{no}
+	</select>
+
+	<select id="selectGetRow" parameterType="product" resultType="product">
+		SELECT no, url, loc, point, dept
+		FROM product
+		WHERE no=#{no}
+	</select>
+
+ </mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 기타 설정정보 :: [MyBatis_Home]/mybatis-3.2.1.pdf 참조 -->
+	<settings>
+		<setting name="callSettersOnNulls" value="false" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="user" type="com.hanains.aserver.domain.User"/>
+		<typeAlias alias="product" type="com.hanains.aserver.domain.Product"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mybatis/mappers/usermapper.xml" />
+		<mapper resource="mybatis/mappers/productmapper.xml" />
+	</mappers>
+
+</configuration>

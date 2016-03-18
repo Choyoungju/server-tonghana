@@ -1,0 +1,40 @@
+{
+  "groups": [{
+    "name": "mybatis",
+    "type": "com.hanains.aserver.MyBatisProperties",
+    "sourceType": "com.hanains.aserver.MyBatisProperties"
+  }],
+  "properties": [
+    {
+      "name": "mybatis.config-location",
+      "type": "org.springframework.core.io.Resource",
+      "sourceType": "com.hanains.aserver.MyBatisProperties"
+    },
+    {
+      "name": "mybatis.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "com.hanains.aserver.MyBatisProperties"
+    },
+    {
+      "name": "mybatis.mapper-locations",
+      "type": "org.springframework.core.io.Resource[]",
+      "sourceType": "com.hanains.aserver.MyBatisProperties"
+    },
+    {
+      "name": "mybatis.password",
+      "type": "java.lang.String",
+      "sourceType": "com.hanains.aserver.MyBatisProperties"
+    },
+    {
+      "name": "mybatis.url",
+      "type": "java.lang.String",
+      "sourceType": "com.hanains.aserver.MyBatisProperties"
+    },
+    {
+      "name": "mybatis.username",
+      "type": "java.lang.String",
+      "sourceType": "com.hanains.aserver.MyBatisProperties"
+    }
+  ],
+  "hints": []
+}
